@@ -1,4 +1,10 @@
-p
+.small
 {
-  background-color: rgb(216, 143, 143);
+ color: white;
+ font-size: .8rem;
+}
+footer{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
 }
