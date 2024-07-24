@@ -1,27 +1,12 @@
+<body>
 <table>
   <tr>
-    <th style="width: 200px;">Naam</th>
+    <th style="width: 200px;">VoorNaam</th>
     <th>Achternaam</th>
   </tr>
-
-  <tr>
-    <td>Barry</td>
-    <td>Kramer</td>
-  </tr>
-  <tr>
-    <td>Bob</td>
-    <td>builder</td>
-  </tr>
-  <tr>
-    <td>Rob</td>
-    <td>Slinger</td>
-  </tr>
-  <tr>
-    <td>Simon</td>
-    <td>Cat</td>
-  </tr>
-  <tr>
-    <td>klaas</td>
-    <td>Vaak</td>
+  <tr *ngFor="let person of persons" >
+    <td>{{person.firstName}}</td>
+    <td>{{person.lastName}}</td>
   </tr>
 </table>
+</body>
