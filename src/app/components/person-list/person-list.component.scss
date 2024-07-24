@@ -11,21 +11,37 @@ table {
   }
 }
 
-/* Set the background color of body to tan */
+
 body {
+  width: 90%;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
 
 }
 
-/* On screens that are 992px or less, set the background color to blue */
+/* On screens that are 992px or less */
 @media screen and (max-width: 992px) {
   body {
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
 
   }
 }
 
-/* On screens that are 600px or less, set the background color to olive */
+/* On screens that are 600px or less*/
 @media screen and (max-width: 600px) {
   body {
-    
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+
   }
 }
