@@ -1,14 +1,23 @@
-<body>
-<table>
-  <tr>
-    <th style="width: 200px;">ID</th>
-    <th style="width: 200px;">VoorNaam</th>
-    <th>Achternaam</th>
-  </tr>
-  <tr *ngFor="let person of persons" >
-    <td>{{person.id}}</td>
-    <td>{{person.firstName}}</td>
-    <td>{{person.lastName}}</td>
-  </tr>
-</table>
-</body>
+<main>
+  <table *ngIf="persons.length > 0">
+    <tr>
+        <th style="width: 200px">ID</th>
+        <th style="width: 200px">VoorNaam</th>
+        <th>Achternaam</th>
+    </tr>
+    <tr *ngFor="let person of persons" (click)="personDetails(person.id!)">
+        <td>{{ person.id }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+    </tr>
+  </table>
+
+  <div class="test" *ngIf="persons.length  === 0">
+    
+    <!-- <div *ngFor="let personData of barrydetails">
+{{personData.firstName}}
+  {{selectedId}}
+  <button (click)= "selectedId = undefined; barrydetails = []">Terug</button>
+</div> -->
+  </div>
+</main>
