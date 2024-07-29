@@ -1,2 +1,13 @@
-Yea!
+<button (click)="getBack()">Back</button>
+<div *ngFor="let person of persons">
+
+  <div *ngIf="person.id == id">
+    {{person.id}}
+    {{person.firstName}}
+    {{person.lastName}}
+  </div>
+
+</div>
+
+
 

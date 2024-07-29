@@ -18,12 +18,8 @@ export class PersonListComponent implements OnInit{
   ngOnInit(): void {}
 
   personDetails(id : number): void{
-    this.router.navigate(['details']);
-    //this.barrydetails.push({city: 'Den helder', id: 1, firstName: 'barry', lastName: 'kramer'})
-    // this.barrydetails.city = "Den Helder";
-    // this.barrydetails.firstName = "barry";
-    // this.barrydetails.lastName = "Kramer";
-    //console.log(this.barrydetails);
+    this.router.navigate(['details',id]);
+
  }
 
 }
