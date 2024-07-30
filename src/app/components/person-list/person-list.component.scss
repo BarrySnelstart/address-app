@@ -2,16 +2,24 @@ table {
   margin: 10px 10px;
 
   th {
-  text-align: left ;
-
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
   }
   td {
-    padding: .25rem .25rem;
-
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 0.25rem 0.25rem;
+  }
+  tr {
+    cursor: pointer;
   }
 }
-
-
+tr:hover {
+  background-color: rgb(83, 80, 255);
+}
 main {
   width: 90%;
   margin: 30px auto;
@@ -19,7 +27,6 @@ main {
   min-height: 300px;
   border: 1px solid steelblue;
   border-radius: 5px;
-
 }
 
 /* On screens that are 992px or less */
@@ -30,7 +37,6 @@ main {
     min-height: 300px;
     border: 1px solid steelblue;
     border-radius: 5px;
-
   }
 }
 
@@ -42,6 +48,5 @@ main {
     min-height: 300px;
     border: 1px solid steelblue;
     border-radius: 5px;
-
   }
 }

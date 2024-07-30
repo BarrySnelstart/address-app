@@ -1,13 +1,22 @@
 <button (click)="getBack()">Back</button>
 <div *ngFor="let person of persons">
-
-  <div *ngIf="person.id == id">
-    {{person.id}}
-    {{person.firstName}}
-    {{person.lastName}}
+  <div class="main" *ngIf="person.id == id">
+    <div>
+      <h2>Person ID : {{ person.id }}</h2>
+      <br />
+      <h2>Voornaam : {{ person.firstName }}</h2>
+      <br />
+      <h2>
+        Straat : {{ person.streetName }} {{ person.houseNumber }}
+        {{ person.houseNumberSufix }}
+      </h2>
+      <br />
+      <h2>Stad : {{ person.city }} ,  {{ person.country }}</h2>
+      <br />
+      <h2>Email : {{ person.emailAdress }}</h2>
+      <br />
+      <h2>Telefoonnummer : {{ person.telephoneNumber }}</h2>
+      <br />
+    </div>
   </div>
-
 </div>
-
-
-
