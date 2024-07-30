@@ -1,135 +1,64 @@
-import { Person } from './Person';
+import { Person } from '../app/models/Person';
 
 export const PERSONS: Person []= [
     {
       "id": 1,
       "firstName": "Barry",
-      "lastName": "Kramer"
+      "lastName": "Kramer",
+      "streetName": "Dahliastraat",
+      "houseNumber": 116,
+      "houseNumberSufix": undefined,
+      "city": "Den Helder",
+      "country": "Holland",
+      "telephoneNumber": "0615032463",
+      "emailAdress" : "bkramer@snelstart.nl"
     },
     {
       "id": 2,
-      "firstName": "Bob",
-      "lastName": "Builder"
+      "firstName": "Henk",
+      "lastName": "boer",
+      "streetName": "Floriade",
+      "houseNumber": 18,
+      "houseNumberSufix": "a",
+      "city": "Schagen",
+      "country": "Holland",
+      "telephoneNumber": "065854854",
+      "emailAdress" : "hboer@hotmail.nl"
     },
     {
       "id": 3,
-      "firstName": "Han",
-      "lastName": "Solo"
+      "firstName": "Kees",
+      "lastName": "von Puffelen",
+      "streetName": "boterstraat",
+      "houseNumber": 80,
+      "houseNumberSufix": undefined,
+      "city": "Texel",
+      "country": "Holland",
+      "telephoneNumber": "0687548564",
+      "emailAdress" : "Kpuff@aol.nl"
     },
     {
       "id": 4,
-      "firstName": "Alice",
-      "lastName": "Smith"
+      "firstName": "Chantal",
+      "lastName": "Janzen",
+      "streetName": "Sterreslaan",
+      "houseNumber": 99,
+      "houseNumberSufix": undefined,
+      "city": "H v Holland",
+      "country": "Holland",
+      "telephoneNumber": "geheim",
+      "emailAdress" : "CJan@lekkerbelangrijk.nl"
     },
     {
       "id": 5,
-      "firstName": "David",
-      "lastName": "Johnson"
-    },
-    {
-      "id": 6,
-      "firstName": "Sarah",
-      "lastName": "Williams"
-    },
-    {
-      "id": 7,
-      "firstName": "James",
-      "lastName": "Brown"
-    },
-    {
-      "id": 8,
-      "firstName": "Patricia",
-      "lastName": "Jones"
-    },
-    {
-      "id": 9,
-      "firstName": "Michael",
-      "lastName": "Miller"
-    },
-    {
-      "id": 10,
-      "firstName": "Linda",
-      "lastName": "Davis"
-    },
-    {
-      "id": 11,
-      "firstName": "Robert",
-      "lastName": "Garcia"
-    },
-    {
-      "id": 12,
-      "firstName": "Elizabeth",
-      "lastName": "Martinez"
-    },
-    {
-      "id": 13,
-      "firstName": "John",
-      "lastName": "Hernandez"
-    },    {
-      "id": 1,
-      "firstName": "Barry",
-      "lastName": "Kramer"
-    },
-    {
-      "id": 2,
-      "firstName": "Bob",
-      "lastName": "Builder"
-    },
-    {
-      "id": 3,
-      "firstName": "Han",
-      "lastName": "Solo"
-    },
-    {
-      "id": 4,
-      "firstName": "Alice",
-      "lastName": "Smith"
-    },
-    {
-      "id": 5,
-      "firstName": "David",
-      "lastName": "Johnson"
-    },
-    {
-      "id": 6,
-      "firstName": "Sarah",
-      "lastName": "Williams"
-    },
-    {
-      "id": 7,
-      "firstName": "James",
-      "lastName": "Brown"
-    },
-    {
-      "id": 8,
-      "firstName": "Patricia",
-      "lastName": "Jones"
-    },
-    {
-      "id": 9,
-      "firstName": "Michael",
-      "lastName": "Miller"
-    },
-    {
-      "id": 10,
-      "firstName": "Linda",
-      "lastName": "Davis"
-    },
-    {
-      "id": 11,
-      "firstName": "Robert",
-      "lastName": "Garcia"
-    },
-    {
-      "id": 12,
-      "firstName": "Elizabeth",
-      "lastName": "Martinez"
-    },
-    {
-      "id": 13,
-      "firstName": "John",
-      "lastName": "Hernandez"
+      "firstName": "Henkie",
+      "lastName": "pankie",
+      "streetName": "fietsplan",
+      "houseNumber": 13,
+      "houseNumberSufix": "2Hoog",
+      "city": "Den Helder",
+      "country": "Holland",
+      "telephoneNumber": "0223666785",
+      "emailAdress" : "woper@wopperseller@gmail.com"
     }
-
-
-  ];
+ ];
