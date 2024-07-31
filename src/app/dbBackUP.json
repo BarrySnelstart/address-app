@@ -58,6 +58,30 @@
     "country": "Holland",
     "telephoneNumber": "0223666785",
     "emailAdress" : "woper@wopperseller@gmail.com"
-  }
+  },
+  {
+    "id": 6,
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "streetName": "Maple Street",
+    "houseNumber": 42,
+    "houseNumberSufix":null,
+    "city": "Toronto",
+    "country": "Canada",
+    "telephoneNumber": "4161234567",
+    "emailAdress": "alice@example.com"
+},
+{
+    "id": 7,
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "streetName": "Oak Avenue",
+    "houseNumber": 123,
+    "houseNumberSufix": "B",
+    "city": "Vancouver",
+    "country": "Canada",
+    "telephoneNumber": "6049876543",
+    "emailAdress": "bob@example.com"
+}
 ]
 }
