@@ -29,9 +29,14 @@ this.onDeleteTask.emit(person);
     this.router.navigate(['list']);
   }
   deleteTask(person: Person){
-    this.persondetailService
+     this.persondetailService
     .deletePerson(person)
     .subscribe(() => { this.persons = this.persons.filter(t => t.id !== person.id); this.getBack();});
 
+  }
+  clickMethod(name: string, person: Person ) {
+    if(confirm("Are you sure to delete "+name)) {
+      this.deleteTask(person);
+    }
   }
 }
