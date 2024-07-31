@@ -31,6 +31,7 @@ this.onDeleteTask.emit(person);
   deleteTask(person: Person){
     this.persondetailService
     .deletePerson(person)
-    .subscribe(() => (this.persons = this.persons.filter(t => t.id !== person.id)));
+    .subscribe(() => { this.persons = this.persons.filter(t => t.id !== person.id); this.getBack();});
+
   }
 }
