@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/app/models/Person';
-import { PERSONS } from 'src/app/mock-persons';
 import { Router } from '@angular/router';
+import { PersondetailService } from 'src/app/services/persondetail.service';
 
 
 
@@ -11,11 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./person-list.component.scss']
 })
 export class PersonListComponent implements OnInit{
-  persons: Person[] = PERSONS;
+  persons: Person[] = [];
 
-  constructor (private router: Router) { }
+  constructor (private router: Router, private persondetailService: PersondetailService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   this.persondetailService.getPersons().subscribe((persons) => (this.persons = persons));
+  }
 
   personDetails(id : number): void{
     this.router.navigate(['details',id]);
