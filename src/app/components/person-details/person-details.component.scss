@@ -12,22 +12,15 @@ button {
   border-radius: 5px;
 }
 
-
 button:hover {
   background-color: lightblue;
 }
 
-
-.main {
-  border: 1px solid #ddd;
-    padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-}
-
-.main > * {
-  margin-right: 10px;
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(0, 4, 255);
+  border-radius: 4px;
 }
