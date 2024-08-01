@@ -1,8 +1,31 @@
-<button (click)="getBack()">Back</button>
+
 <div *ngFor="let person of persons">
   <div class="main" *ngIf="person.id == id">
-    <div>
-      <h2>Person ID  {{ person.id }}</h2>
+
+    <form>
+      <button (click)="getBack()">Back</button>
+      <button (click)="clickMethod(person.firstName, person)">Delete</button>
+      <br>
+      <label>Naam</label>
+      <input type="text" id="fullname" name="fullname" value="{{person.firstName}} {{person.lastName}}"><br>
+      <label>Adres</label>
+      <input type="text" id="adress" name="adres" value="{{person.streetName}} {{person.houseNumberSufix}} {{person.houseNumber}}"><br>
+      <input type="text" id="adress" name="adres" value="{{person.city}} {{person.country}}"><br>
+
+      <Label>Telefoonnummer</Label>
+      <input type="text" id="telephonenumber" name="Telefoonnummer" value="{{person.telephoneNumber}}">
+      <Label>emailAdress</Label>
+      <input type="email" id="emailAdress" name="emailAdress" value="{{person.emailAdress}}">
+
+
+    </form>
+
+  </div>
+</div>
+
+
+
+      <!-- <h2>Person ID  {{ person.id }}</h2>
       <br />
       <h2>Voornaam  {{ person.firstName }}</h2>
       <br />
@@ -17,7 +40,6 @@
       <br />
       <h2>Telefoonnummer  {{ person.telephoneNumber }}</h2>
       <br />
-      <button (click)="clickMethod(person.firstName, person)">Delete</button>
+
     </div>
-  </div>
-</div>
+</div> -->
