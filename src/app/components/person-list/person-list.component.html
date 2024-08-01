@@ -1,18 +1,18 @@
 <main>
   <table *ngIf="persons.length > 0">
     <tr>
-        <th style="width: 200px">ID</th>
-        <th style="width: 200px">Voornaam</th>
-        <th>Achternaam</th>
+      <th style="width: 200px">ID</th>
+      <th style="width: 200px">Voornaam</th>
+      <th>Achternaam</th>
     </tr>
-    <tr class="tableRow"*ngFor="let person of persons" (click)="personDetails(person.id!)">
-        <td>{{ person.id }}</td>
-        <td>{{ person.firstName }}</td>
-        <td>{{ person.lastName }}</td>
+    <tr
+      class="tableRow"
+      *ngFor="let person of persons"
+      (click)="personDetails(person.id!)"
+    >
+      <td>{{ person.id }}</td>
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }} {{ person.nameSufix }}</td>
     </tr>
   </table>
-
-  <!-- <div class="test" *ngIf="persons.length  === 0">
-
-  </div> -->
 </main>

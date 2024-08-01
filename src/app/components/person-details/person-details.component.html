@@ -1,45 +1,54 @@
-
 <div *ngFor="let person of persons">
   <div class="main" *ngIf="person.id == id">
-
     <form>
       <button (click)="getBack()">Back</button>
-      <button (click)="clickMethod(person.firstName, person)">Delete</button>
-      <br>
+      <button (click)="deleteConfirmMessage(person)">Delete</button>
+      <br />
       <label>Naam</label>
-      <input type="text" id="fullname" name="fullname" value="{{person.firstName}} {{person.lastName}}"><br>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        value="{{ person.firstName }} {{ person.nameSufix }} {{
+          person.lastName
+        }}"
+      /><br />
       <label>Adres</label>
-      <input type="text" id="adress" name="adres" value="{{person.streetName}} {{person.houseNumberSufix}} {{person.houseNumber}}"><br>
-      <input type="text" id="adress" name="adres" value="{{person.city}} {{person.country}}"><br>
+      <input
+        type="text"
+        id="adress"
+        name="adres"
+        value="{{ person.streetName }} {{ person.houseNumberSufix }} {{
+          person.houseNumber
+        }}"
+      /><br />
+      <input
+        type="text"
+        id="adress"
+        name="adres"
+        value="{{ person.zipCode }}  {{ person.city }} "
+      /><br />
+      <input
+        type="text"
+        id="country"
+        name="land"
+        value="{{ person.country }}"
+      /><br /><br /><br />
 
       <Label>Telefoonnummer</Label>
-      <input type="text" id="telephonenumber" name="Telefoonnummer" value="{{person.telephoneNumber}}">
-      <Label>emailAdress</Label>
-      <input type="email" id="emailAdress" name="emailAdress" value="{{person.emailAdress}}">
-
-
+      <input
+        type="text"
+        id="telephonenumber"
+        name="Telefoonnummer"
+        value="{{ person.telephoneNumber }}"
+      />
+      <Label>email adress</Label>
+      <input
+        type="email"
+        id="emailAdress"
+        name="emailAdress"
+        value="{{ person.emailAdress }}"
+      />
     </form>
-
   </div>
 </div>
-
-
-
-      <!-- <h2>Person ID  {{ person.id }}</h2>
-      <br />
-      <h2>Voornaam  {{ person.firstName }}</h2>
-      <br />
-      <h2>
-        Straat : {{ person.streetName }} {{ person.houseNumber }}
-        {{ person.houseNumberSufix }}
-      </h2>
-      <br />
-      <h2>Stad  {{ person.city }} ,  {{ person.country }}</h2>
-      <br />
-      <h2>Email  {{ person.emailAdress }}</h2>
-      <br />
-      <h2>Telefoonnummer  {{ person.telephoneNumber }}</h2>
-      <br />
-
-    </div>
-</div> -->
