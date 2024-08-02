@@ -1,54 +1,38 @@
-<div *ngFor="let person of persons">
-  <div class="main" *ngIf="person.id == id">
-    <form>
+<div>
+  <div class="main">
+    <form [formGroup]="formGroup">
       <button (click)="getBack()">Back</button>
       <button (click)="deleteConfirmMessage(person)">Delete</button>
+      <button (click)="updatePersonDetails()">{{buttonText}}</button>
       <br />
-      <label>Naam</label>
-      <input
-        type="text"
-        id="fullname"
-        name="fullname"
-        value="{{ person.firstName }} {{ person.nameSufix }} {{
-          person.lastName
-        }}"
-      /><br />
-      <label>Adres</label>
-      <input
-        type="text"
-        id="adress"
-        name="adres"
-        value="{{ person.streetName }} {{ person.houseNumberSufix }} {{
-          person.houseNumber
-        }}"
-      /><br />
-      <input
-        type="text"
-        id="adress"
-        name="adres"
-        value="{{ person.zipCode }}  {{ person.city }} "
-      /><br />
-      <input
-        type="text"
-        id="country"
-        name="land"
-        value="{{ person.country }}"
-      /><br /><br /><br />
+      <label>ID</label>
+      <input type="text" style="width: 60px;" id="id" name="id" formControlName="id"/><br />
 
-      <Label>Telefoonnummer</Label>
-      <input
-        type="text"
-        id="telephonenumber"
-        name="Telefoonnummer"
-        value="{{ person.telephoneNumber }}"
-      />
-      <Label>email adress</Label>
-      <input
-        type="email"
-        id="emailAdress"
-        name="emailAdress"
-        value="{{ person.emailAdress }}"
-      />
+      <label>Voornaam</label>
+      <input type="text" class="firstName" id="firstName" formControlName="firstName" />
+      <label>tussenvoegsel</label>
+      <input type="text" class="nameSufix" id="nameSufix" formControlName="nameSufix" />
+      <label>Achternaam</label>
+      <input type="text" class="lastName" id="lastName" formControlName="lastName"/><br />
+
+      <label>straat</label>
+      <input type="text" class="streetName" id="streetName" formControlName="streetName" />
+      <label>Huisnummer toevoeging</label>
+      <input type="text" class="houseNumberSufix" id="houseNumberSufix" formControlName="houseNumberSufix"/>
+      <label>Huisnummer</label>
+      <input type="text" class="houseNumber" id="houseNumber" formControlName="houseNumber" /><br />
+
+      <label>stad</label>
+      <input type="text" class="city" id="city" formControlName="city" />
+      <label>Land</label>
+      <input type="text" class="country" id="country" formControlName="country" /><br />
+
+      <label>Email adres</label>
+      <input type="text" class="emailAdress" id="emailAdress" formControlName="emailAdress" />
+
+      <label>telefoon nummer</label>
+      <input type="text" class="telephoneNumber" id="telephoneNumber" formControlName="telephoneNumber"/><br />
     </form>
   </div>
 </div>
+

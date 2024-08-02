@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersondetailService } from 'src/app/services/persondetail.service';
 import { Person } from 'src/app/models/Person';
+import { Observable } from 'rxjs';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-person-details',
@@ -9,10 +11,65 @@ import { Person } from 'src/app/models/Person';
   styleUrls: ['./person-details.component.scss'],
 })
 export class PersonDetailsComponent implements OnInit {
+  persons: Person[] = [];
+  public person! : Person;
+  protected buttonText = "Opslaan"
+  public id: number | undefined;
+  public isLoading = false;
+
   @Output() onDeleteTask: EventEmitter<Person> = new EventEmitter();
 
-  persons: Person[] = [];
-  public id: number | undefined;
+  public formGroup = new FormGroup<any>({
+    id: new FormControl<number | null>(null, {
+      validators: [],
+      updateOn: 'change',
+    }),
+    firstName: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    lastName: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    nameSufix: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    streetName: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    houseNumber: new FormControl<number | null>(null, {
+      validators: [],
+      updateOn: 'change',
+    }),
+    houseNumberSufix: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    zipCode: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    city: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change' }),
+    country: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    telephoneNumber: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+    emailAdress: new FormControl<string>('', {
+      validators: [],
+      updateOn: 'change',
+    }),
+  });
+
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -20,11 +77,13 @@ export class PersonDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.formGroup.controls['id'].disable()
     this.activatedRoute.paramMap.subscribe((params) => {
       this.id = parseInt(params.get('id') ?? '', 10);
-      this.persondetailService
-        .getPersons()
-        .subscribe((persons) => (this.persons = persons));
+      this.persondetailService.getPerson(this.id).subscribe((person) => {
+    this.person = person;
+        this.formGroup.setValue(person)
+      });
     });
   }
   onDelete(person: any) {
@@ -44,5 +103,27 @@ export class PersonDetailsComponent implements OnInit {
     if (confirm('Are you sure to delete ' + person.firstName)) {
       this.deleteTask(person);
     }
+  }
+  updatePersonDetails() {
+    this.isLoading = true;
+    this.persondetailService.updatePersonDetails(this.formGroup.getRawValue()).subscribe();
+    this.startUpdatingButton()
+  }
+
+  private startUpdatingButton() {
+    let count = 0;
+
+    const interval = setInterval(() => {
+      if (count >= 10) { // After 2 seconds (10 * 0.2s)
+        clearInterval(interval);
+        setTimeout(() => {
+        }, 0);
+      } else {
+        const currentDots = ".".repeat(count % 4); // Cycles through "", ".", "..", "..."
+        this.buttonText = "Opslaan" + currentDots;
+ // Replace this with actual button text update in UI
+        count++;
+      }
+    }, 200);
   }
 }

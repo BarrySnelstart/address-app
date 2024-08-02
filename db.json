@@ -1,10 +1,10 @@
 {
   "person": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Barry",
       "lastName": "Kramer",
-      "nameSufix" :null,
+      "nameSufix": null,
       "streetName": "Dahliastraat",
       "houseNumber": 116,
       "houseNumberSufix": null,
@@ -15,10 +15,10 @@
       "emailAdress": "bkramer@snelstart.nl"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Henk",
-      "lastName": "boer",
-      "nameSufix" :null,
+      "lastName": "Tank",
+      "nameSufix": "De",
       "streetName": "Floriade",
       "houseNumber": 18,
       "houseNumberSufix": "a",
@@ -29,10 +29,10 @@
       "emailAdress": "hboer@hotmail.nl"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstName": "Kees",
       "lastName": "Puffelen",
-      "nameSufix" :"von",
+      "nameSufix": "von",
       "streetName": "boterstraat",
       "houseNumber": 80,
       "houseNumberSufix": null,
@@ -43,10 +43,10 @@
       "emailAdress": "Kpuff@aol.nl"
     },
     {
-      "id": 4,
+      "id": "4",
       "firstName": "Chantal",
       "lastName": "Janzen",
-      "nameSufix" :null,
+      "nameSufix": null,
       "streetName": "Sterreslaan",
       "houseNumber": 99,
       "zipCode": "1784MJ",
@@ -57,10 +57,10 @@
       "emailAdress": "CJan@lekkerbelangrijk.nl"
     },
     {
-      "id": 5,
+      "id": "5",
       "firstName": "Henkie",
       "lastName": "pankie",
-      "nameSufix" :null,
+      "nameSufix": null,
       "streetName": "fietsplan",
       "houseNumber": 13,
       "zipCode": "1784MJ",
@@ -71,10 +71,10 @@
       "emailAdress": "woper@wopperseller@gmail.com"
     },
     {
-      "id": 6,
+      "id": "6",
       "firstName": "Alice",
       "lastName": "Johnson",
-      "nameSufix" :null,
+      "nameSufix": null,
       "streetName": "Maple Street",
       "houseNumber": 42,
       "houseNumberSufix": null,
@@ -85,15 +85,15 @@
       "emailAdress": "alice@example.com"
     },
     {
-      "id": 7,
+      "id": "7",
       "firstName": "Bob",
       "lastName": "Smith",
-      "nameSufix" :null,
+      "nameSufix": null,
       "streetName": "Oak Avenue",
       "houseNumber": 123,
       "houseNumberSufix": "B",
       "zipCode": "1784MJ",
-      "city": "Vancouver",
+      "city": "Vancoover",
       "country": "Canada",
       "telephoneNumber": "6049876543",
       "emailAdress": "bob@example.com"
