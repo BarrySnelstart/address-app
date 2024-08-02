@@ -9,7 +9,7 @@
       "houseNumber": 116,
       "houseNumberSufix": null,
       "zipCode": "1784MJ",
-      "city": "Aaaanaaa pauuuulowna",
+      "city": "Den Helder",
       "country": "Holland",
       "telephoneNumber": "0615032463",
       "emailAdress": "bkramer@snelstart.nl"
@@ -17,8 +17,8 @@
     {
       "id": "2",
       "firstName": "Henk",
-      "lastName": "boer",
-      "nameSufix": null,
+      "lastName": "Tank",
+      "nameSufix": "De",
       "streetName": "Floriade",
       "houseNumber": 18,
       "houseNumberSufix": "a",
