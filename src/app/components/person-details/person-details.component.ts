@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersondetailService } from 'src/app/services/persondetail.service';
 import { Person } from 'src/app/models/Person';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-person-details',
@@ -44,5 +45,9 @@ export class PersonDetailsComponent implements OnInit {
     if (confirm('Are you sure to delete ' + person.firstName)) {
       this.deleteTask(person);
     }
+  }
+  updatePersonDetails (person: Person){
+    person.city = "Aaaanaaa pauuuulowna"
+    this.persondetailService.updatePersonDetails(person).subscribe();
   }
 }
