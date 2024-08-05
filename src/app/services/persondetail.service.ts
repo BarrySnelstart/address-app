@@ -5,9 +5,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-}
+    'Content-Type': 'application/json',
+  }),
+};
 
 @Injectable({
   providedIn: 'root',
@@ -25,12 +25,12 @@ export class PersondetailService {
     return this.http.delete<Person>(url);
   }
 
-  getPerson(id: number) : Observable<Person> {
-    return this.http.get<Person>(this.apiUrl+ "/" + id);
+  getPerson(id: number): Observable<Person> {
+    return this.http.get<Person>(this.apiUrl + '/' + id);
   }
 
-  updatePersonDetails (person : Person): Observable<Person>{
+  updatePersonDetails(person: Person): Observable<Person> {
     const url = `${this.apiUrl}/${person.id}`;
     return this.http.put<Person>(url, person, httpOptions);
-}
+  }
 }
