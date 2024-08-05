@@ -1,38 +1,126 @@
 <div>
-  <div class="main">
-    <form [formGroup]="formGroup">
-      <button (click)="getBack()">Back</button>
-      <button (click)="deleteConfirmMessage(person)">Delete</button>
-      <button (click)="updatePersonDetails()">{{buttonText}}</button>
-      <br />
-      <label>ID</label>
-      <input type="text" style="width: 60px;" id="id" name="id" formControlName="id"/><br />
+  <form [formGroup]="formGroup">
 
-      <label>Voornaam</label>
-      <input type="text" class="firstName" id="firstName" formControlName="firstName" />
-      <label>tussenvoegsel</label>
-      <input type="text" class="nameSufix" id="nameSufix" formControlName="nameSufix" />
-      <label>Achternaam</label>
-      <input type="text" class="lastName" id="lastName" formControlName="lastName"/><br />
+    <div style="align-items: right;">
+      <button (click)="getBack()" type="button" class="btn btn-primary">
+        Back
+      </button>
+      <button
+        (click)="deleteConfirmMessage(person)"
+        type="button"
+        class="btn btn-danger"
+      >
+        Delete
+      </button>
+      <button
+        (click)="updatePersonDetails()"
+        type="button"
+        [disabled]="!formGroup.dirty"
+        class="btn btn-primary"
+      >
+        {{ buttonText }}
+      </button>
+    </div>
 
-      <label>straat</label>
-      <input type="text" class="streetName" id="streetName" formControlName="streetName" />
-      <label>Huisnummer toevoeging</label>
-      <input type="text" class="houseNumberSufix" id="houseNumberSufix" formControlName="houseNumberSufix"/>
-      <label>Huisnummer</label>
-      <input type="text" class="houseNumber" id="houseNumber" formControlName="houseNumber" /><br />
+    <br/>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">Voornaam</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            formControlName="firstName"
+          />
+        </div>
 
-      <label>stad</label>
-      <input type="text" class="city" id="city" formControlName="city" />
-      <label>Land</label>
-      <input type="text" class="country" id="country" formControlName="country" /><br />
+        <div class="col-2">
+          <label class="form-label">tv</label>
+          <input
+            type="text"
+            class="form-control name-sufix"
+            id="nameSufix"
+            formControlName="nameSufix"
+          />
+        </div>
 
-      <label>Email adres</label>
-      <input type="text" class="emailAdress" id="emailAdress" formControlName="emailAdress" />
+        <div class="col-5">
+          <label class="form-label">achternaam</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            formControlName="lastName"
+          />
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-8">
+          <label class="form-label">straat</label>
+          <input
+            type="text"
+            class="form-control"
+            id="streetName"
+            formControlName="streetName"
+          />
+        </div>
 
-      <label>telefoon nummer</label>
-      <input type="text" class="telephoneNumber" id="telephoneNumber" formControlName="telephoneNumber"/><br />
-    </form>
-  </div>
+        <div class="col-2">
+          <label class="form-label">nr</label>
+          <input
+            type="text"
+            class="form-control"
+            id="houseNumber"
+            formControlName="houseNumber"
+          />
+        </div>
+
+        <div class="col-2">
+          <label class="form-label">tv</label>
+          <input
+            type="text"
+            class="form-control"
+            id="houseNumberSufix"
+            formControlName="houseNumberSufix"
+          />
+        </div>
+    </div>
+    <br/>
+
+      <div class="row">
+        <div class="col-2">
+          <label class="form-label">postcode</label>
+          <input
+            type="text"
+            class="form-control"
+            id="zipCode"
+            formControlName="zipCode"
+          />
+        </div>
+
+        <div class="col-5">
+          <label class="form-label">Stad</label>
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            formControlName="city"
+          />
+        </div>
+
+        <div class="col-5">
+          <label class="form-label">Land</label>
+          <input
+            type="text"
+            class="form-control"
+            id="country"
+            formControlName="country"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
-

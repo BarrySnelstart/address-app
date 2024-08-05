@@ -1,5 +1,6 @@
 table {
   margin: 10px 10px;
+  width: 100%;
 
   th {
     padding: 8px;
@@ -22,33 +23,5 @@ table {
 tr:hover {
   background-color: rgb(83, 80, 255);
 }
-main {
-  width: 90%;
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  border-radius: 5px;
-}
 
-/* On screens that are 992px or less */
-@media screen and (max-width: 992px) {
-  main {
-    margin: 30px auto;
-    overflow: auto;
-    min-height: 300px;
-    border: 1px solid steelblue;
-    border-radius: 5px;
-  }
-}
 
-/* On screens that are 600px or less*/
-@media screen and (max-width: 600px) {
-  main {
-    margin: 30px auto;
-    overflow: auto;
-    min-height: 300px;
-    border: 1px solid steelblue;
-    border-radius: 5px;
-  }
-}
