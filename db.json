@@ -1,10 +1,24 @@
 {
   "person": [
     {
+      "id": "1",
+      "firstName": "Barry",
+      "lastName": "Kramer",
+      "nameSufix": null,
+      "streetName": "Dahliastraat",
+      "houseNumber": 116,
+      "houseNumberSufix": null,
+      "zipCode": "1782MJ",
+      "city": "Den Helder",
+      "country": "Holland",
+      "telephoneNumber": "0615032463",
+      "emailAdress": "bkramer@snelstart.nl"
+    },
+    {
       "id": "2",
-      "firstName": "Henki",
-      "lastName": "Tank",
-      "nameSufix": "De",
+      "firstName": "Henk",
+      "lastName": "boer",
+      "nameSufix": null,
       "streetName": "Floriade",
       "houseNumber": 18,
       "houseNumberSufix": "a",
@@ -79,7 +93,7 @@
       "houseNumber": 123,
       "houseNumberSufix": "B",
       "zipCode": "1784MJ",
-      "city": "Vancoover",
+      "city": "Vancouver",
       "country": "Canada",
       "telephoneNumber": "6049876543",
       "emailAdress": "bob@example.com"
