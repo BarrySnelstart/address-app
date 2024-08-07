@@ -105,6 +105,7 @@ export class PersonDetailsComponent implements OnInit {
     }
   }
   updatePersonDetails() {
+    console.log(this.formGroup.value);
     this.isLoading = true;
     this.persondetailService.updatePersonDetails(this.formGroup.getRawValue()).subscribe();
     this.startUpdatingButton()

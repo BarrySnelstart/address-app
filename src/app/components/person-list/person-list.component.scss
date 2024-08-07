@@ -1,27 +1,3 @@
-table {
-  margin: 10px 10px;
-  width: 100%;
-
-  th {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    background-color: #102272;
-    color: white;
-  }
-  td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    padding: 0.25rem 0.25rem;
-  }
-  tr {
-    cursor: pointer;
-  }
+tr {
+  cursor: pointer;
 }
-tr:hover {
-  background-color: rgb(83, 80, 255);
-}
-
-
