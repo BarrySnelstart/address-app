@@ -40,7 +40,7 @@ export class PersondetailService {
   }
 
   generateID(): string {
-    const generatedid = Math.random() * 100;
-    return Math.round(generatedid).toString();
+    const generatedid = Date.now();
+    return generatedid.toString();
   }
 }
