@@ -225,20 +225,6 @@
       "emailAdress": "benjamin.walker@example.com"
     },
     {
-      "id": "18",
-      "firstName": "Henkie",
-      "lastName": "pankie",
-      "nameSufix": null,
-      "streetName": "fietsplan",
-      "houseNumber": 13,
-      "houseNumberSufix": "2Hoog",
-      "zipCode": "1784MJ",
-      "city": "Den Helder",
-      "country": "Holland",
-      "telephoneNumber": "0223666785",
-      "emailAdress": "woper@wopperseller@gmail.com"
-    },
-    {
       "id": "19",
       "firstName": "Alice",
       "lastName": "Johnson",
