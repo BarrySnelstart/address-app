@@ -1,5 +1,5 @@
 export class Person {
-  private _id?: number;
+  private _id?: string;
   public firstName: string;
   public lastName: string;
   nameSufix?: string;
@@ -26,11 +26,11 @@ export class Person {
     this.telephoneNumber = obj.telephoneNumber;
     this.emailAdress = obj.emailAdress;
   }
-  get id(): number{
-    return this._id ?? 0;
+  get id(): string{
+    return this._id ?? '';
   }
 
-  set id(id: number){
+  set id(id: string){
     this._id = id;
   }
 
