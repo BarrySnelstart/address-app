@@ -33,4 +33,14 @@ export class PersondetailService {
     const url = `${this.apiUrl}/${person.id}`;
     return this.http.put<Person>(url, person, httpOptions);
   }
+
+  newPersonDetails(person: Person): Observable<Person> {
+    person.id = this.generateID();
+    return this.http.post<Person>(this.apiUrl, person, httpOptions);
+  }
+
+  generateID(): number {
+    const generatedid = Math.random() * 100;
+    return Math.round(generatedid);
+  }
 }

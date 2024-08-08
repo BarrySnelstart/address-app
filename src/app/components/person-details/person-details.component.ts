@@ -3,7 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PersondetailService } from 'src/app/services/persondetail.service';
 import { Person } from 'src/app/models/Person';
 import { Observable } from 'rxjs';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-person-details',
@@ -12,8 +17,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class PersonDetailsComponent implements OnInit {
   persons: Person[] = [];
-  public person! : Person;
-  protected buttonText = "Opslaan"
+  public isNew: boolean = false;
+  public person!: Person;
+  protected buttonText = '';
   public id: number | undefined;
   public isLoading = false;
 
@@ -54,7 +60,8 @@ export class PersonDetailsComponent implements OnInit {
     }),
     city: new FormControl<string>('', {
       validators: [],
-      updateOn: 'change' }),
+      updateOn: 'change',
+    }),
     country: new FormControl<string>('', {
       validators: [],
       updateOn: 'change',
@@ -69,7 +76,6 @@ export class PersonDetailsComponent implements OnInit {
     }),
   });
 
-
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -77,13 +83,17 @@ export class PersonDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.formGroup.controls['id'].disable()
+    this.formGroup.controls['id'].disable();
     this.activatedRoute.paramMap.subscribe((params) => {
-      this.id = parseInt(params.get('id') ?? '', 10);
-      this.persondetailService.getPerson(this.id).subscribe((person) => {
-    this.person = person;
-        this.formGroup.setValue(person)
-      });
+      if (params.get('id') == 'new') {
+        this.isNew = true;
+      } else {
+        this.id = parseInt(params.get('id') ?? '', 10);
+        this.persondetailService.getPerson(this.id).subscribe((person) => {
+          this.person = person;
+          this.formGroup.setValue(person);
+        });
+      }
     });
   }
   onDelete(person: any) {
@@ -105,26 +115,35 @@ export class PersonDetailsComponent implements OnInit {
     }
   }
   updatePersonDetails() {
-    console.log(this.formGroup.value);
     this.isLoading = true;
-    this.persondetailService.updatePersonDetails(this.formGroup.getRawValue()).subscribe();
-    this.startUpdatingButton()
+    if (this.isNew) {
+      this.persondetailService
+        .newPersonDetails(this.formGroup.value)
+        .subscribe();
+    } else {
+      this.persondetailService
+        .updatePersonDetails(this.formGroup.getRawValue())
+        .subscribe();
+    }
+    this.startUpdatingButton();
   }
 
   private startUpdatingButton() {
     let count = 0;
 
     const interval = setInterval(() => {
-      if (count >= 10) { // After 2 seconds (10 * 0.2s)
+      if (count >= 10) {
+        // After 2 seconds (10 * 0.2s)
         clearInterval(interval);
-        setTimeout(() => {
-        }, 0);
+        setTimeout(() => {this.buttonText = 'Opslaan'}, 0);
       } else {
-        const currentDots = ".".repeat(count % 4); // Cycles through "", ".", "..", "..."
-        this.buttonText = "Opslaan" + currentDots;
- // Replace this with actual button text update in UI
+        const currentDots = '.'.repeat(count % 4); // Cycles through "", ".", "..", "..."
+        this.buttonText = 'Opslaan' + currentDots;
+        // Replace this with actual button text update in UI
         count++;
       }
+
     }, 200);
+
   }
 }
