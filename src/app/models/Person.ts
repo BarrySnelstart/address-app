@@ -26,10 +26,14 @@ export class Person {
     this.telephoneNumber = obj.telephoneNumber;
     this.emailAdress = obj.emailAdress;
   }
-  get id(): number | undefined {
-    return this._id;
+  get id(): number{
+    return this._id ?? 0;
   }
-  
+
+  set id(id: number){
+    this._id = id;
+  }
+
   get fullName(): string {
     if (this.nameSufix) {
       return `${this.firstName} ${this.nameSufix} ${this.lastName}`;
