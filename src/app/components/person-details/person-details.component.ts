@@ -96,24 +96,29 @@ export class PersonDetailsComponent implements OnInit {
       }
     });
   }
-  onDelete(person: any) {
-    this.onDeleteTask.emit(person);
-  }
+
+
+  // onDelete(person: any) {
+  //   this.onDeleteTask.emit(person);
+  // }
 
   getBack() {
     this.router.navigate(['list']);
   }
+
   deleteTask(person: Person) {
     this.persondetailService.deletePerson(person).subscribe(() => {
       this.persons = this.persons.filter((t) => t.id !== person.id);
       this.getBack();
     });
   }
+
   deleteConfirmMessage(person: Person) {
     if (confirm('Are you sure to delete ' + person.firstName)) {
       this.deleteTask(person);
     }
   }
+
   updatePersonDetails() {
     this.isLoading = true;
     if (this.isNew) {

@@ -39,8 +39,8 @@ export class PersondetailService {
     return this.http.post<Person>(this.apiUrl, person, httpOptions);
   }
 
-  generateID(): number {
+  generateID(): string {
     const generatedid = Math.random() * 100;
-    return Math.round(generatedid);
+    return Math.round(generatedid).toString();
   }
 }

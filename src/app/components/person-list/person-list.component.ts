@@ -26,7 +26,7 @@ export class PersonListComponent implements OnInit {
     });
   }
 
-  public personDetails(id: number): void {
+  public personDetails(id: string): void {
     this.router.navigate(['details', id]);
   }
 }
