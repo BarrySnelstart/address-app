@@ -1,5 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand" routerLink="list">Address App</a>
+    <div class="btn-group" role="group">
+      <button
+        id="btnGroupDrop1"
+        type="button"
+        class="btn btn-primary dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        opties
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <li>
+          <a class="dropdown-item" routerLink="details/new">Nieuw persoon</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
