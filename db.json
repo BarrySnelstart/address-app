@@ -1,22 +1,8 @@
 {
   "person": [
     {
-      "id": "2",
-      "firstName": "Henk",
-      "lastName": "boer",
-      "nameSufix": null,
-      "streetName": "Floriade",
-      "houseNumber": 18,
-      "houseNumberSufix": "a",
-      "zipCode": "1784MJ",
-      "city": "Schagen",
-      "country": "Holland",
-      "telephoneNumber": "065854854",
-      "emailAdress": "hboer@hotmail.nl"
-    },
-    {
       "id": "3",
-      "firstName": "Kees1",
+      "firstName": "Kees",
       "lastName": "Puffelen",
       "nameSufix": "von",
       "streetName": "boterstraat",
@@ -45,7 +31,7 @@
     {
       "id": "5",
       "firstName": "Henkie",
-      "lastName": "pankie",
+      "lastName": "pankie.",
       "nameSufix": null,
       "streetName": "fietsplan",
       "houseNumber": 13,
@@ -305,6 +291,20 @@
       "zipCode": "1800 BB",
       "city": "Alkmaar",
       "country": "Nederland",
+      "telephoneNumber": "",
+      "emailAdress": ""
+    },
+    {
+      "id": "1723196307447",
+      "firstName": "Henk ",
+      "lastName": "boer",
+      "nameSufix": "de ",
+      "streetName": "lantaarnpaastraat",
+      "houseNumber": "125",
+      "houseNumberSufix": "15",
+      "zipCode": "1800 BB",
+      "city": "Alkmaar",
+      "country": "Netherlands",
       "telephoneNumber": "",
       "emailAdress": ""
     }
