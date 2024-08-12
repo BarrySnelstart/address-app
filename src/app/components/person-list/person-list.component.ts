@@ -29,4 +29,18 @@ export class PersonListComponent implements OnInit {
   public personDetails(id: string): void {
     this.router.navigate(['details', id]);
   }
+  getBack() {
+    this.router.navigate(['list']);
+  }
+  deleteTask(person: Person) {
+    this.persondetailService.deletePerson(person).subscribe(() => {
+      this.persons = this.persons.filter((t) => t.id !== person.id);
+      this.getBack();
+    });
+  }
+  deleteConfirmMessage(person: Person) {
+    if (confirm('Are you sure to delete ' + person.firstName)) {
+      this.deleteTask(person);
+    }
+  }
 }

@@ -1,13 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersondetailService } from 'src/app/services/persondetail.service';
 import { Person } from 'src/app/models/Person';
-import { Observable } from 'rxjs';
 import {
   FormControl,
   FormGroup,
-  ReactiveFormsModule,
-  Validators,
+
 } from '@angular/forms';
 
 @Component({
@@ -97,28 +95,6 @@ export class PersonDetailsComponent implements OnInit {
     });
   }
 
-
-  // onDelete(person: any) {
-  //   this.onDeleteTask.emit(person);
-  // }
-
-  getBack() {
-    this.router.navigate(['list']);
-  }
-
-  deleteTask(person: Person) {
-    this.persondetailService.deletePerson(person).subscribe(() => {
-      this.persons = this.persons.filter((t) => t.id !== person.id);
-      this.getBack();
-    });
-  }
-
-  deleteConfirmMessage(person: Person) {
-    if (confirm('Are you sure to delete ' + person.firstName)) {
-      this.deleteTask(person);
-    }
-  }
-
   updatePersonDetails() {
     this.isLoading = true;
     if (this.isNew) {
@@ -140,15 +116,15 @@ export class PersonDetailsComponent implements OnInit {
       if (count >= 10) {
         // After 2 seconds (10 * 0.2s)
         clearInterval(interval);
-        setTimeout(() => {this.buttonText = 'Opslaan'}, 0);
+        setTimeout(() => {
+          this.buttonText = 'Opslaan';
+        }, 0);
       } else {
         const currentDots = '.'.repeat(count % 4); // Cycles through "", ".", "..", "..."
         this.buttonText = 'Opslaan' + currentDots;
         // Replace this with actual button text update in UI
         count++;
       }
-
     }, 200);
-
   }
 }
