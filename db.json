@@ -1,20 +1,6 @@
 {
   "person": [
     {
-      "id": "3",
-      "firstName": "Kees",
-      "lastName": "Puffelen",
-      "nameSufix": "von",
-      "streetName": "boterstraat",
-      "houseNumber": 80,
-      "houseNumberSufix": null,
-      "zipCode": "1784MJ",
-      "city": "Texel",
-      "country": "Holland",
-      "telephoneNumber": "0687548564",
-      "emailAdress": "Kpuff@aol.nl"
-    },
-    {
       "id": "4",
       "firstName": "Chantal",
       "lastName": "Janzen",
