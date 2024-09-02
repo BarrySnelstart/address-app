@@ -1,8 +1,13 @@
-// .btn:disabled {
-//   background-color: gray;
-//   border: none;
-// }
+.update-person-details-button{
+  display: flex;
+  justify-content: end;
+}
 
-// .container{
-// margin-top: 10px;
-// }
+label
+{
+  font-weight: 600;
+}
+
+::placeholder {
+  color: lightgray;
+}
