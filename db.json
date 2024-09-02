@@ -36,10 +36,10 @@
       "streetName": "Maple Street",
       "houseNumber": 42,
       "houseNumberSufix": null,
-      "zipCode": "1784MJ",
+      "zipCode": "1784 MJ",
       "city": "Toronto",
       "country": "Canada",
-      "telephoneNumber": "4161234567",
+      "telephoneNumber": "04161234567",
       "emailAdress": "alice@example.com"
     },
     {
